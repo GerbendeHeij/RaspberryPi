@@ -19,7 +19,7 @@ if __name__ == '__main__':
     pin10.write_digital_value(1)
     pin11.write_digital_value(1)
     red = pin9.pwm
-    red.write_value(self,1)
+    red.write_value(1)
 
     running = true
 
