@@ -11,8 +11,7 @@ if __name__ == '__main__':
     a = ArduinoTree(connection=connection)
     pin9 = a.pin.get(9)
     pin9.mode = 1
-    pin9.write_digital_value(1)
-    pwm = pin9.pwm()
+    pin9.write_digital_value()
+    pin9.pwm.write_value(255)
     print ('set  frequency=%s Hz' % 1000)
-    pwm.set_high_freq_around(1000)
-    print ('real frequency=%s Hz' % pwm.read_frequency())
+  
