@@ -4,6 +4,7 @@ __author__ = 'gcdeh_000'
 
 from nanpy.pwm import ArduinoPwmPin
 from nanpy.serialmanager import SerialManager
+import time
 
 
 if __name__ == '__main__':
@@ -16,7 +17,9 @@ if __name__ == '__main__':
     pin10.mode = 1
     pin11.mode = 1
     pin9.write_digital_value(1)
+    time.sleep(10)
     pin10.write_digital_value(1)
+    time.sleep(10)
     pin11.write_digital_value(1)
     redpin = pin9.pwm
     greenpin = pin10.pwm
@@ -39,7 +42,9 @@ if __name__ == '__main__':
         blue = Input_text
 
         redpin.write_value(red)
+        time.sleep(10)
         greenpin.write_value(green)
+        time.sleep(10)
         bluepin.write_value(blue)
 
         print red
