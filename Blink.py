@@ -18,18 +18,30 @@ if __name__ == '__main__':
     pin9.write_digital_value(1)
     pin10.write_digital_value(1)
     pin11.write_digital_value(1)
-    red = pin9.pwm
-    red.write_value(1)
+    redpin = pin9.pwm
+    greenpin = pin10.pwm
+    bluepin = pin11.pwm
 
     running = True
 
     while running:
-        input = input("Give the collor in the following format: red,green,blue")
+        Input_text =input("Give the collor rightness of red");
         if input == 'exit':
             running = False
-        red = input[0:3]
-        green = input[5:8]
-        blue = input[10:13]
-        print (red)
-        print (blue)
-        print (red)
+        red = Input_text
+        Input_text =input("Give the collor rightness of green");
+        if input == 'exit':
+            running = False
+        green = Input_text
+        Input_text =input("Give the collor rightness of blue");
+        if input == 'exit':
+            running = False
+        blue = Input_text
+
+        redpin.write_value(red)
+        greenpin.write_value(green)
+        bluepin.write_value(blue)
+
+        print red
+        print green
+        print blue
