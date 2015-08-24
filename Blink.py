@@ -12,6 +12,7 @@ if __name__ == '__main__':
     pin9 = a.pin.get(9)
     pin9.mode = 1
     pin9.write_digital_value()
-    pin9.pwm.write_value(255)
+    pwm = pin9.pwm
+    pwm.write_value(self,1)
     print ('set  frequency=%s Hz' % 1000)
-  
+
