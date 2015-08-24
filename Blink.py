@@ -21,12 +21,12 @@ if __name__ == '__main__':
     red = pin9.pwm
     red.write_value(1)
 
-    running = true
+    running = True
 
     while running:
         input = input("Give the collor in the following format: red,green,blue")
         if input == 'exit':
-            running = false
+            running = False
         red = input[0:3]
         green = input[5:8]
         blue = input[10:13]
