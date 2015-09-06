@@ -14,7 +14,8 @@ import time
 if __name__ == '__main__':
     connection = SerialManager()
     a = ArduinoTree(connection=connection)
-    TempSensor = dallastemperature.DallasTemperature(4,connection=connection)
+    tempPin = a.pin.get(4)
+    TempSensor = dallastemperature.DallasTemperature(tempPin,connection=connection)
 
     print "Start reading temp sensor"
     time.sleep(0.010)
